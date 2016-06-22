@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Year]
+(
+	[YearId] INT IDENTITY(1,1) NOT NULL,
+	[Name] VARCHAR(50) NOT NULL,	
+	[CreatedOn]   DATETIME	NOT NULL,
+	[UpdatedOn]   DATETIME	NULL,	
+	[DeletedOn]    DATETIME NULL,
+	CONSTRAINT [PK_dbo.Year] PRIMARY KEY CLUSTERED ([YearId] ASC)	
+) ON [PRIMARY]
+
+

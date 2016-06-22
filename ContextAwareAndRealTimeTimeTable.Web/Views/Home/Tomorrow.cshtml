@@ -1,0 +1,80 @@
+﻿
+<div ng-controller="TomorrowsActivityController">
+
+    <div class="row">
+        <div id="page-title" class=" col-md-6">
+            <h4 class="page-header addon">Tomorrows Activities</h4>
+
+        </div>
+        <div class="searchbox col-md-6 searchCustom">
+            <div class="input-group custom-search-form">
+                <input id="search-fld" type="text" name="param" placeholder="Search using either subject,lect name, time, Day " ng-model="searchKeyword" class="form-control">
+                <span class="input-group-btn">
+                    <button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li>timetable</li>
+        <li>Todays Lectures</li>
+
+    </ol>
+
+    <div class="clear0"></div>
+    <hr />
+
+    <div class="panel panel-default panel-left">
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div ng-hide="data.length">
+                    <p>There currently no Activities for tomorrow</p>
+                </div>
+
+                <div ng-hide="!data.length" ng-loading-container="tableParams.settings().$loading">
+                    <table ng-table="tableParams" class="table table-bordered table-hover smallTable table-striped">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    <div>Subject</div>
+                                </th>
+                                <th>Day</th>
+                                <th>Group</th>
+                                <th>Room</th>
+                                @*<th>Lecturer</th>*@
+                                <th>StartTime</th>
+                                <th>EndTime</th>
+                                @if (Request.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Lecturer")))
+                                {
+                                <th>Comment</th>
+                                }
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="activity in $data | filter: searchKeyword">
+                                <td width="25%">@*<a href="#/activity/edit/{{activity.SubjectId}}">*@{{activity.Subject.Name}}@*</a>*@</td>
+                                <td width="20%">{{activity.Day.Name}}</td>
+                                <td width="15%">{{activity.Group.Name}}</td>
+                                <td width="15%">{{activity.Room.Name}}</td>
+                                <td width="15%">{{activity.StartTime}}</td>
+                                <td width="15%">{{activity.EndTime}}</td>
+                                @if (Request.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Lecturer")))
+                                {
+                                    <td width="20%"><a href="@ViewData["RootNav"]#/activity/edit/{{activity.ActivityId}}">Indicate Availability</a></td>
+                                }
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

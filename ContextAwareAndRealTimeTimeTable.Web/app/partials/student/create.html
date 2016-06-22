@@ -1,0 +1,85 @@
+﻿<div class="row" ng-controller="StudentEditController">
+    <div id="page-title">
+        <h1 class="page-header text-overflow">Student</h1>
+    </div>
+
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li><a href="#/students/list/">Students</a></li>
+        <li>Edit Student</li>
+
+    </ol>
+
+    <div class="clear5"></div>
+    
+    <div class="panel panel-default panel-left">
+        <div class="panel-body">
+            <form name="form" class="form-horizontal col-md-8">
+
+
+                <div class="form-group ">
+                    <label class="col-md-2 control-label"> Student Number</label>
+
+                    <div class="col-md-10 ">
+                        <input name="studentNumber" class="form-control" ng-model="student.StudentNumber" required ng-class="{ errorinput: form.studentNumber.$invalid }">
+                        <span ng-show="form.studentNumber.$invalid">
+                            <span ng-show="form.studentNumber.$error.required" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> Student Number is required.</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="col-md-2 control-label">Registration Number</label>
+
+                    <div class="col-md-10 ">
+                        <input name="registrationNumber" class="form-control" ng-model="student.RegistrationNumber" required ng-class="{ errorinput: form.registrationNumber.$invalid }">
+                        <span ng-show="form.registrationNumber.$invalid">
+                            <span ng-show="form.registrationNumber.$error.required" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> Registration Number is required.</span>
+                        </span>
+                    </div>
+                </div>       
+
+               <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-10">
+                        <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showMessageSave" style="clear:both;">
+                            <i class="fa-fw fa fa-check"></i>
+                            <span>Student details have been saved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-10">
+                        <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showMessageSaveFailed" style="clear:both;">
+                            <i class="fa-fw fa fa-check"></i>
+                            <span>Student details have not been saved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+
+                    <div class="col-md-10">
+
+                        <div class="btn-group">
+                            <button ng-click="createStudent(student)" class="btn btn-primary">
+                               Save Student
+                            </button>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

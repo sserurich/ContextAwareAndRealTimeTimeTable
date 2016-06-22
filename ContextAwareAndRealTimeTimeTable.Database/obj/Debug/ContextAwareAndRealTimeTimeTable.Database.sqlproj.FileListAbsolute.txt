@@ -1,0 +1,5 @@
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Database\bin\Debug\ContextAwareAndRealTimeTimeTable.Database.dacpac
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Database\bin\Debug\ContextAwareAndRealTimeTimeTable.Database.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Database\bin\Debug\ContextAwareAndRealTimeTimeTable.Database.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Database\obj\Debug\ContextAwareAndRealTimeTimeTable.Database.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Database\obj\Debug\ContextAwareAndRealTimeTimeTable.Database.pdb

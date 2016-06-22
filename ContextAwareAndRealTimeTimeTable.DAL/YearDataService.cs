@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ContextAwareAndRealTimeTimeTable.EF.UnitOfWork;
+using ContextAwareAndRealTimeTimeTable.EF.Models;
+
+namespace ContextAwareAndRealTimeTimeTable.DAL
+{
+    public class YearDataService :DataServiceBase, IYearDataService
+    {
+         public YearDataService(IUnitOfWork<ContextAwareAndRealTimeTimeTableEntities> unitOfWork)
+            : base(unitOfWork)
+        {
+
+        }
+
+         public IEnumerable<Year> GetAllYears()
+         {
+             return this.UnitOfWork.Get<Year>().AsQueryable()
+                    .Where(y => y.DeletedOn == null);
+         }
+
+
+    }
+}

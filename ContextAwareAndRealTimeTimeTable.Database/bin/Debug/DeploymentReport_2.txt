@@ -1,0 +1,35 @@
+﻿** Warnings
+     WITH CHECK | NOCHECK option for existing data check enforcement is ignored.
+     WITH CHECK | NOCHECK option for existing data check enforcement is ignored.
+
+** Highlights
+     Tables that will be rebuilt
+       [dbo].[Group]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Group].[YearId] on table [dbo].[Group] must be added, but the column has no default value and does not
+         allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add
+         a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a
+         deployment option.
+
+** User actions
+     Table rebuild
+       [dbo].[Group] (Table)
+     Create
+       [dbo].[Fk_dbo_Group_dbo_Year_YearId] (Foreign Key)
+
+** Supporting actions
+     Drop
+       [dbo].[Fk_dbo_Activity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_GroupActivity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentGroup_dbo_Group_GroupId] (Foreign Key)
+     Create
+       [dbo].[Fk_dbo_Activity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_GroupActivity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentGroup_dbo_Group_GroupId] (Foreign Key)
+
+The column [dbo].[Group].[YearId] on table [dbo].[Group] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

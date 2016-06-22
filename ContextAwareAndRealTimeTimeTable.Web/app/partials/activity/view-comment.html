@@ -1,0 +1,41 @@
+﻿<div ng-controller="CommentViewController">
+
+    <div id="page-title">
+        <h4 class="addon">View Comment</h4>
+    </div>
+
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li>timetable</li>
+        <li>activity</li>
+        <li>comment</li>
+        <li>view</li>
+    </ol>
+
+    <div class="clear0"></div>
+    <hr />
+
+    <div class="panel panel-default panel-left">
+        <div class="panel-body">            
+
+            <div class="panel" style="padding-bottom: 0;">
+
+                <div>
+                    <h3 class="panel-title">
+                        <span class="addon">
+                            Created By: {{comment.AspNetUser.FirstName}} {{comment.AspNetUser.LastName}}
+                        </span>
+                    </h3>
+                </div>
+                <div>
+                    <h3 class="panel-title"> Created On: {{comment.CreatedOn| date:"yyyy-MM-dd hh:mm"}}</h3>
+                </div>
+                            <div class="">
+                                <p class="panel-body">{{comment.Description}}</p>
+                            </div>
+
+                    </div>
+
+        </div>
+    </div>
+</div>

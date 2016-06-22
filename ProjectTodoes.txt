@@ -1,0 +1,22 @@
+How to determine xml document has changed
+
+
+add verification table on erd
+change flowchart, remove update preference, reset password
+change caps
+update architecture diagram
+add references IEE
+add citations
+add screen shots(chapter 5)
+modify user story
+change dataflow diagram
+draw sequence diagram
+draw class diagrams
+add lists
+add list of tables 
+make changes engineer pointed out.
+
+work on mobile application
+
+read up on how to draw sequence diagrams,
+ read up on how to reference using IEEE

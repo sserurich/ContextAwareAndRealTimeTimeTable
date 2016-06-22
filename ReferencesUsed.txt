@@ -1,0 +1,85 @@
+working wiz  xml in c#
+http://csharp.net-tutorials.com/xml/reading-xml-with-the-xmlreader-class/
+sample xml file
+http://rss.cnn.com/rss/edition_world.rss
+
+nice webapp to look at
+https://login.qt.io/login
+
+
+http://www.hosty.org/fet/FET%20Guide.htm  written by Tom Hosty accessed on  04/16/2015
+
+
+http://www.tomjewett.com/dbdesign/dbdesign.php?page=manymany.php  accessed on  04/16/2015
+
+
+http://www.codeproject.com/Articles/581487/Unit-of-Work-Design-Pattern  Unit Of work design pattern
+
+A Unit of Work keeps track of everything you do during a business transaction that can affect the database. When you're done, it figures out everything that needs to be done to alter the database as a result of your work.
+
+
+https://msdn.microsoft.com/en-us/magazine/dd882510.aspx
+
+https://www.nuget.org/packages/EntityFramework/
+
+Automapper
+https://www.nuget.org/packages?q=automapper
+http://automapper.org/
+
+http://www.codeproject.com/Articles/61629/AutoMapper
+
+
+http://www.bestdotnettraining.com/videolibrary
+
+http://www.bestdotnettraining.com/videolibrary
+
+
+http://www.google.com/fonts
+
+
+http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents
+
+http://anthonychu.ca/post/aspnet-identity-20---logging-in-with-email-or-username/
+
+mobile development
+
+http://www.wikihow.com/Execute-HTTP-POST-Requests-in-Android
+
+http://stackoverflow.com/questions/8464204/android-api-14-post-data-to-http
+
+http://loopj.com/android-async-http/
+
+
+http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-navbar.php
+
+
+http://www.w3schools.com/sql/
+
+
+http://www.androidhive.info/2012/01/android-json-parsing-tutorial/
+
+http://mobile.dzone.com/news/android-tutorial-how-parse
+
+https://ihofmann.wordpress.com/2012/08/09/restful-web-services-with-json-in-android/
+
+https://www.google.com/webhp?sourceid=chrome-instant&rlz=1C1SAVS_enUG635UG635&ion=1&espv=2&ie=UTF-8#q=creating%20a%20simple%20android%20application%20that%20reads%20json%20content%20from%20a%20webservice
+
+
+
+https://www.websequencediagrams.com/#
+
+http://www.agilemodeling.com/artifacts/sequenceDiagram.htm
+
+http://en.wikipedia.org/wiki/Sequence_diagram
+
+ieee referencing
+
+http://www.ieee.org/documents/ieeecitationref.pdf
+
+http://guides.lib.monash.edu/citing-referencing/ieee
+
+
+http://www.york.ac.uk/integrity/downloads/15663_IEEE%20Style-webFINAL.pdf
+
+
+architecture diagram// rolap architecture

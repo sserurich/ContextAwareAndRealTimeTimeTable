@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Day]
+(
+	[DayId]		  INT IDENTITY(1,1) NOT NULL,
+	[Name]		  VARCHAR(50) NOT NULL,	
+	[CreatedOn]   DATETIME	NOT NULL,
+	[UpdatedOn]   DATETIME	NULL,	
+	[DeletedOn]   DATETIME NULL,
+	CONSTRAINT [PK_dbo.Day] PRIMARY KEY CLUSTERED ([DayId] ASC)	
+) ON [PRIMARY]

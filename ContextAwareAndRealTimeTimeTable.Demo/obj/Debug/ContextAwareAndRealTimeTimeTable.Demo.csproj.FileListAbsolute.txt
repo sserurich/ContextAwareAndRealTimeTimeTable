@@ -1,0 +1,12 @@
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\ContextAwareAndRealTimeTimeTable.Demo.exe.config
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\ContextAwareAndRealTimeTimeTable.Demo.exe
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\ContextAwareAndRealTimeTimeTable.Demo.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\ContextAwareAndRealTimeTimeTable.Models.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\EntityFramework.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\ContextAwareAndRealTimeTimeTable.Models.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\EntityFramework.xml
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\obj\Debug\ContextAwareAndRealTimeTimeTable.Demo.exe
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\obj\Debug\ContextAwareAndRealTimeTimeTable.Demo.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Demo\obj\Debug\ContextAwareAndRealTimeTimeTable.Demo.csprojResolveAssemblyReference.cache

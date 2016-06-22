@@ -1,0 +1,550 @@
+﻿
+<div class="" ng-controller="DashBoardCtrl">
+   
+    <div class="row">
+        <div id="page-title">
+            <ul class="list-inline text-center">
+                <li><h4 class="text-center blueColor">Ongoing Lessons</h4> </li>
+                <li><a href="/Home/Today">Todays Lectures</a></li>
+                <li><a href="/Home/Tomorrow/">Tomorrows Lectures</a></li>
+
+            </ul>
+</div>
+
+        <div class="col-md-12">
+            <table class="table table-bordered table-responsive table-striped tablecustom col-md-12">
+                
+                <thead>
+                    <tr class="alert-success addon">
+                        <th></th>
+                        <th ng-repeat="year in years">{{year.Name}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr ng-repeat="course in courses">
+                <td class="tablecell">{{course.Description}}({{course.Name}})</td>
+                <td>Bangalore</td>
+                <td>Bangalore</td>
+                <td>Bangalore</td>
+                <td>Bangalore</td>
+            </tr>-->
+
+                    <tr>
+                        <td class="alert-success addon">Computer Science(BCS)</td>
+                        <td  ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingCsYearOneActivity != null,'alert-danger':OnGoingTimetableSchedules.OnGoingCsYearOneActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearOneActivity == null" class="col-m-10 ng-hide">
+                                <p>There is No Ongoing lesson currently in CS Yr I</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge bubble">No Ongoing</span></div>
+                            </div>
+
+                            <p>{{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingCsYearOneActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingCsYearOneActivity  != null" class="ng-hide">Ends at: {{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.EndTime}}</p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearOneActivity != null" class="ng-hide pull-right"> <span class="label label-success label-as-badge bubble">OnGoing</span></div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingCsYearOneActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingCsYearTwoActivity != null,'alert-danger':OnGoingTimetableSchedules.OnGoingCsYearTwoActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearTwoActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in CS Yr II</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+
+                            <p>{{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingCsYearTwoActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingCsYearTwoActivity  != null" class="ng-hide">Ends at: {{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.EndTime}}</p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearTwoActivity  != null" class="ng-hide"> <span class="label label-success label-as-badge">OnGoing</span></div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Comments.length>0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingCsYearTwoActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingCsYearThreeActivity != null,'alert-danger':OnGoingTimetableSchedules.OnGoingCsYearThreeActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearThreeActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in CS Yr III</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+
+                            <p>{{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingCsYearThreeActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingCsYearThreeActivity  != null" class="ng-hide">Ends at: {{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.EndTime}}</p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearThreeActivity != null" class="ng-hide pull-right">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Comments.length>0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingCsYearThreeActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="alert-success addon"><h5 class="text-center">Not Associated</h5></td>
+
+                    </tr>
+                    <tr>
+                        <td class="alert-success addon">Information Technology(BIT)</td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBitYearOneActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBitYearOneActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearOneActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BIT Yr I</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBitYearOneActivity  != null" class="ng-hide">
+                                        Started: {{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.StartTime}}
+                                    </p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBitYearOneActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearOneActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingBitYearOneActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBitYearTwoActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBitYearTwoActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearTwoActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BIT Yr II</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBitYearTwoActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBitYearTwoActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearTwoActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingBitYearTwoActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBitYearThreeActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBitYearThreeActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearThreeActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BIT Yr III</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBitYearThreeActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBitYearThreeActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearThreeActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingBitYearThreeActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td class="alert-success addon"><h5 class="text-center">Not Associated</h5></td>
+                    </tr>
+                    <tr>
+                        <td class="alert-success addon">Software Engineering(BSE)</td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingSEYearOneActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingSEYearOneActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearOneActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in SE Yr I</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearOneActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearOneActivity  != null" class="ng-hide">Ends at: {{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.EndTime}}</p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearOneActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingSEYearOneActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingSEYearTwoActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingSEYearTwoActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearTwoActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in SE Yr II</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearTwoActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearTwoActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearTwoActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingSEYearTwoActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingSEYearThreeActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingSEYearThreeActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearThreeActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in SE Yr III</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearThreeActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearThreeActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearThreeActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingSEYearThreeActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingSEYearFourActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingSEYearFourActivity == null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearFourActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in SE Yr IV</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearFourActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingSEYearFourActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearFourActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingSEYearFourActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="alert-success addon">BRAM</td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBramYearOneActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBramYearOneActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearOneActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BRAM Yr I</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearOneActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearOneActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearOneActivity  != null" class="ng-hide"> 
+                                         <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingBramYearOneActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBramYearTwoActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBramYearTwoActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearTwoActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BRAM Yr II</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearTwoActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearTwoActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.EndTime}}
+                                    </p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearTwoActivity  != null" class="ng-hide">
+                                       <span class="label label-success label-as-badge">OnGoing</span> </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingBramYearTwoActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                   
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBramYearThreeActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBramYearThreeActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearThreeActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BRAM Yr III</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearThreeActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBramYearThreeActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearThreeActivity  != null" class="ng-hide">
+                                         <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-info label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Comments[0].ActivityId}}/{{OnGoingTimetableSchedules.OnGoingBramYearThreeActivity.Comments[0].CommentId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="alert-success addon"><h5 class="text-center">Not Associated</h5></td>
+                    </tr>
+                    <tr>
+                        <td class="alert-success addon">Information Systems(BIS)</td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBisYearOneActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBisYearOneActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearOneActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BIS Yr I</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBisYearOneActivity != null">Started: {{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBisYearOneActivity != null">Ends at: {{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.EndTime}}</p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearOneActivity != null">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingBisYearOneActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBisYearTwoActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBisYearTwoActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearTwoActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BIS Yr II</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBisYearTwoActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBisYearTwoActivity  != null" class="ng-hide">Ends at: {{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.EndTime}}</p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearTwoActivity  != null" class="ng-hide">
+                                    <span class="label label-success label-as-badge">OnGoing</span></div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingBisYearTwoActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBisYearThreeActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBisYearThreeActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearThreeActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BIS Yr III</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBisYearThreeActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBisYearThreeActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearThreeActivity  != null" class="ng-hide">  <span class="label label-success label-as-badge">OnGoing</span></div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingBisYearThreeActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="alert-success addon"><h5 class="text-center">Not Associated</h5></td>
+                    </tr>
+                    <tr>
+                        <td class="alert-success addon">Library And Information Science(BLIS)</td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBlisYearOneActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBlisYearOneActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearOneActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BLIS Yr I</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBlisYearOneActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBlisYearOneActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearOneActivity  != null" class="ng-hide">
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingBlisYearOneActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BLIS Yr II</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity  != null" class="ng-hide"> 
+                                        <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingBlisYearTwoActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td ng-class="{'alert-info':OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity!= null,'alert-danger':OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity== null}">
+                            <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity == null" class="col-m-10 ng-hide">
+                                <p>There is no Ongoing lesson currently in BLIS Yr III</p>
+                                <div class="pull-right"><span class="label label-warning label-as-badge">No Ongoing</span></div>
+                            </div>
+                            <p>{{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Subject.Name}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Room.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Group.Name}}</p>
+                                    <p>{{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Lecturer.EmployeeNumber}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity  != null" class="ng-hide">Started: {{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.StartTime}}</p>
+                                    <p ng-show="OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity  != null" class="ng-hide">
+                                        Ends at: {{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.EndTime}}
+                                    </p>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity  != null" class="ng-hide">
+                                         <span class="label label-success label-as-badge">OnGoing</span>
+                                    </div>
+                                    <div ng-show="OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Comments.length >0" class="ng-hide pull-right">
+                                        <span class="label label-warning label-as-badge white-color"><a href="#/comment/view/{{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Comments[0].CommentId}}/{{OnGoingTimetableSchedules.OnGoingBlisYearThreeActivity.Comments[0].ActivityId}}">Check Lecturer's Comment</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="alert-success addon"><h5 class="text-center">Not Associated</h5></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,5 @@
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Models\bin\Debug\ContextAwareAndRealTimeTimeTable.Models.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Models\bin\Debug\ContextAwareAndRealTimeTimeTable.Models.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Models\obj\Debug\ContextAwareAndRealTimeTimeTable.Models.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Models\obj\Debug\ContextAwareAndRealTimeTimeTable.Models.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.Models\obj\Debug\ContextAwareAndRealTimeTimeTable.Models.csprojResolveAssemblyReference.cache

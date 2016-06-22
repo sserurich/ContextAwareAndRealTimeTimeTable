@@ -1,0 +1,75 @@
+﻿<div ng-controller="ActivityController">
+    <div class="row">
+
+        <div id="page-title" class="col-md-6">
+
+            <h4 class="page-header addon">All Lessons timetable schedules</h4>
+
+        </div>
+
+        <div class="searchbox col-md-6 searchCustom">
+            <div class="input-group custom-search-form">
+                <input id="search-fld" type="text" name="param" placeholder="Search using either subject,lect name, time, Day " ng-model="searchKeyword" class="form-control">
+                <span class="input-group-btn">
+                    <button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li>timetable</li>
+        <li>All Lectures</li>
+
+    </ol>    
+
+    <div class="clear0"></div>
+    <hr />
+
+    <div class="panel panel-default panel-left">
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div ng-hide="data.length">
+                    <p>There currently no Acitivities</p>
+                </div>
+
+                <div ng-hide="!data.length" ng-loading-container="tableParams.settings().$loading">
+                    <table ng-table="tableParams" class="table table-bordered table-hover smallTable table-striped">
+                        <thead>
+                            <tr>
+                                <!--<th>Id</th>-->
+                                <th>
+                                    Subject
+                                </th>
+                                <th>Day</th>
+                                <th>Group</th>
+                                <th>Room</th>
+                                <th>Lecturer</th>
+                                <th>StartTime</th>
+                                <th>EndTime</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="activity in $data | filter: searchKeyword">
+                                <!--<td width="5%">{{activity.ActivityId}}</td>-->
+                                <td width="25%"><a href="#/activity/edit/{{activity.ActivityId}}">{{activity.Subject.Name}}</a></td>
+                                <td width="20%">{{activity.Day.Name}}</td>
+                                <td width="20%">{{activity.Group.Name}}</td>
+                                <td width="20%">{{activity.Room.Name}}</td>
+                                <td width="20%">{{activity.Lecturer.EmployeeNumber}}</td>
+                                <td width="20%">{{activity.StartTime}}</td>
+                                <td width="20%">{{activity.EndTime}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,171 @@
+﻿<div ng-controller="PreferencesEditController">
+    <div class="row">
+        <div id="page-title">
+            <h4 class="page-header addon">Create Preferences</h4>
+
+        </div>
+                <ol class="breadcrumb">
+            <li><a href="#/">Dashboard</a></li>
+            <li>student</li>
+            <li>Preferences- Create</li>
+
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title addon">  Select Years</h3></div>
+                    <div class="panel-body">
+                        <ul class="list-group">                        
+                            <li ng-repeat="year in years" class="list-group-item">                                
+                                    <input type="checkbox" class="checkbox" checklist-model="studentSelectedYears" checklist-value="year" />{{year.Name}}
+                             </li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title addon">
+                            Select Courses
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="course in courses" class="list-group-item">
+
+                                <input type="checkbox" class="checkbox" checklist-model="studentSelectedCourses" checklist-value="course" />{{course.Description}}({{course.Name}})
+                            </li>
+                        </ul>
+                       </div>
+                    </div>
+             </div>
+
+           </div>
+        <div class="col-md-4">
+            <div class="row" ng-show="studentSelectedCourses.length && studentSelectedYears.length">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title addon">
+                            Select Groups
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="group in groups" class="list-group-item">
+                                <input type="checkbox" class="checkbox-inline" checklist-model="studentSelectedGroups" checklist-value="group" /> {{group.Name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" ng-show="studentSelectedCourses.length && studentSelectedYears.length && studentSelectedGroups.length">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title addon">
+                            Select Subjects
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="subject in subjects" class="list-group-item">
+                                <input type="checkbox" checklist-model="studentSelectedSubjects" checklist-value="subject" /> {{subject.Name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-md-2 control-label"></label>
+                    <div class="col-md-offset-4 col-md-10">
+                        <button ng-click="savePreference()" class="btn btn-default text-center btn-custom btn-custom-modified"> save preferences</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+                      <div class="row">
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><h3 class="panel-title addon">Selected Years</h3></div>
+                              <div class="panel-body">
+                                  <ul class="list-group">
+                                      <li ng-repeat="studentSelectedYear in studentSelectedYears" class="list-group-item">
+                                          {{studentSelectedYear.Name}}
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><h3 class="panel-title addon">Selected Courses</h3></div>
+                              <div class="panel-body">
+                                  <ul class="list-group">
+                                      <li ng-repeat="studentSelectedCourse in studentSelectedCourses" class="list-group-item">
+                                          {{studentSelectedCourse.Description}}
+                                      </li>
+                                  </ul>
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><h3 class="panel-title addon">Selected Groups</h3></div>
+                              <div class="panel-body">
+                                  <ul class="list-group">
+                                      <li ng-repeat="studentSelectedGroup in studentSelectedGroups" class="list-group-item">
+                                          {{studentSelectedGroup.Name}}
+                                      </li>
+                                  </ul>
+                              </div>
+
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><h3 class="panel-title addon">Selected Subjects</h3></div>
+                              <div class="panel-body">
+                                  <ul class="list-group">
+                                      <li ng-repeat="studentSelectedSubject in studentSelectedSubjects" class="list-group-item">
+                                          {{studentSelectedSubject.Name}}
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+   </div>
+   
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-10">
+                <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showMessageSave" style="clear:both;">
+                    <i class="fa-fw fa fa-check"></i>
+                    <span>Student Preferences have been saved</span>
+                </div>
+            </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-10">
+            <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showMessageSaveFailed" style="clear:both;">
+                <i class="fa-fw fa fa-check"></i>
+                <span>Student Preferences have not been saved</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContextAwareAndRealTimeTimeTableModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="LecturerId" Type="Int32" Nullable="false" />
+    <Property Name="DayId" Type="Int32" Nullable="false" />
+    <Property Name="RoomId" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EndTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Day" Relationship="Self.Fk_dbo_Activity_dbo_Day_DayId" FromRole="Activity" ToRole="Day" />
+    <NavigationProperty Name="Group" Relationship="Self.Fk_dbo_Activity_dbo_Group_GroupId" FromRole="Activity" ToRole="Group" />
+    <NavigationProperty Name="Lecturer" Relationship="Self.Fk_dbo_Activity_dbo_Lecturer_LecturerId" FromRole="Activity" ToRole="Lecturer" />
+    <NavigationProperty Name="Room" Relationship="Self.Fk_dbo_Activity_dbo_Room_RoomId" FromRole="Activity" ToRole="Room" />
+    <NavigationProperty Name="Comments" Relationship="Self.Fk_dbo_Comment_dbo_Activity_ActivityId" FromRole="Activity" ToRole="Comment" />
+    <NavigationProperty Name="GroupActivities" Relationship="Self.Fk_dbo_GroupActivity_dbo_Activity_ActivityId" FromRole="Activity" ToRole="GroupActivity" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdentityUser_Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_IdentityUser_Id" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdentityUser_Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_IdentityUser_Id" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_IdentityUser_Id" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_IdentityUser_Id" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="Lecturers" Relationship="Self.Fk_dbo_Lecturer_dbo_AspNetUsers_Id" FromRole="AspNetUsers" ToRole="Lecturer" />
+    <NavigationProperty Name="Students" Relationship="Self.Fk_dbo_Student_dbo_AspNetUsers_Id" FromRole="AspNetUsers" ToRole="Student" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ActivityId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activity" Relationship="Self.Fk_dbo_Comment_dbo_Activity_ActivityId" FromRole="Comment" ToRole="Activity" />
+    <NavigationProperty Name="Lecturer" Relationship="Self.Fk_dbo_Comment_dbo_Lecturer_CreatedBy" FromRole="Comment" ToRole="Lecturer" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="CourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CourseGroupSubjects" Relationship="Self.Fk_dbo_CourseGroupSubject_dbo_Course_CourseId" FromRole="Course" ToRole="CourseGroupSubject" />
+    <NavigationProperty Name="CourseSubjects" Relationship="Self.Fk_dbo_CourseSubject_dbo_Course_CourseId" FromRole="Course" ToRole="CourseSubject" />
+    <NavigationProperty Name="Groups" Relationship="Self.Fk_dbo_Group_dbo_Course_CourseId" FromRole="Course" ToRole="Group" />
+    <NavigationProperty Name="StudentCourses" Relationship="Self.Fk_dbo_StudentCourse_dbo_Course_CourseId" FromRole="Course" ToRole="StudentCourse" />
+  </EntityType>
+  <EntityType Name="CourseGroupSubject">
+    <Key>
+      <PropertyRef Name="CourseGroupSubjectId" />
+      <PropertyRef Name="CourseId" />
+      <PropertyRef Name="SubjectId" />
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="CourseGroupSubjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseId" Type="Int32" Nullable="false" />
+    <Property Name="SubjectId" Type="Int32" Nullable="false" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Course" Relationship="Self.Fk_dbo_CourseGroupSubject_dbo_Course_CourseId" FromRole="CourseGroupSubject" ToRole="Course" />
+    <NavigationProperty Name="Group" Relationship="Self.Fk_dbo_CourseGroupSubject_dbo_Group_GroupId" FromRole="CourseGroupSubject" ToRole="Group" />
+    <NavigationProperty Name="Subject" Relationship="Self.Fk_dbo_CourseGroupSubject_dbo_Subject_SubjectId" FromRole="CourseGroupSubject" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="CourseSubject">
+    <Key>
+      <PropertyRef Name="CourseSubjectId" />
+      <PropertyRef Name="CourseId" />
+      <PropertyRef Name="SubjectId" />
+    </Key>
+    <Property Name="CourseSubjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseId" Type="Int32" Nullable="false" />
+    <Property Name="SubjectId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Course" Relationship="Self.Fk_dbo_CourseSubject_dbo_Course_CourseId" FromRole="CourseSubject" ToRole="Course" />
+    <NavigationProperty Name="Subject" Relationship="Self.Fk_dbo_CourseSubject_dbo_Subject_SubjectId" FromRole="CourseSubject" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="Day">
+    <Key>
+      <PropertyRef Name="DayId" />
+    </Key>
+    <Property Name="DayId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activities" Relationship="Self.Fk_dbo_Activity_dbo_Day_DayId" FromRole="Day" ToRole="Activity" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YearId" Type="Int32" Nullable="false" />
+    <Property Name="CourseId" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activities" Relationship="Self.Fk_dbo_Activity_dbo_Group_GroupId" FromRole="Group" ToRole="Activity" />
+    <NavigationProperty Name="Course" Relationship="Self.Fk_dbo_Group_dbo_Course_CourseId" FromRole="Group" ToRole="Course" />
+    <NavigationProperty Name="CourseGroupSubjects" Relationship="Self.Fk_dbo_CourseGroupSubject_dbo_Group_GroupId" FromRole="Group" ToRole="CourseGroupSubject" />
+    <NavigationProperty Name="Year" Relationship="Self.Fk_dbo_Group_dbo_Year_YearId" FromRole="Group" ToRole="Year" />
+    <NavigationProperty Name="GroupActivities" Relationship="Self.Fk_dbo_GroupActivity_dbo_Group_GroupId" FromRole="Group" ToRole="GroupActivity" />
+    <NavigationProperty Name="StudentGroups" Relationship="Self.Fk_dbo_StudentGroup_dbo_Group_GroupId" FromRole="Group" ToRole="StudentGroup" />
+  </EntityType>
+  <EntityType Name="GroupActivity">
+    <Key>
+      <PropertyRef Name="GroupActivityId" />
+      <PropertyRef Name="ActivityId" />
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="Int32" Nullable="false" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activity" Relationship="Self.Fk_dbo_GroupActivity_dbo_Activity_ActivityId" FromRole="GroupActivity" ToRole="Activity" />
+    <NavigationProperty Name="Group" Relationship="Self.Fk_dbo_GroupActivity_dbo_Group_GroupId" FromRole="GroupActivity" ToRole="Group" />
+  </EntityType>
+  <EntityType Name="Lecturer">
+    <Key>
+      <PropertyRef Name="LecturerId" />
+    </Key>
+    <Property Name="LecturerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activities" Relationship="Self.Fk_dbo_Activity_dbo_Lecturer_LecturerId" FromRole="Lecturer" ToRole="Activity" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.Fk_dbo_Lecturer_dbo_AspNetUsers_Id" FromRole="Lecturer" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Comments" Relationship="Self.Fk_dbo_Comment_dbo_Lecturer_CreatedBy" FromRole="Lecturer" ToRole="Comment" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activities" Relationship="Self.Fk_dbo_Activity_dbo_Room_RoomId" FromRole="Room" ToRole="Activity" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.Fk_dbo_Student_dbo_AspNetUsers_Id" FromRole="Student" ToRole="AspNetUsers" />
+    <NavigationProperty Name="StudentCourses" Relationship="Self.Fk_dbo_StudentCourse_dbo_Student_StudentId" FromRole="Student" ToRole="StudentCourse" />
+    <NavigationProperty Name="StudentGroups" Relationship="Self.Fk_dbo_StudentGroup_dbo_Student_StudentId" FromRole="Student" ToRole="StudentGroup" />
+    <NavigationProperty Name="StudentSubjects" Relationship="Self.Fk_dbo_StudentSubject_dbo_Student_StudentId" FromRole="Student" ToRole="StudentSubject" />
+    <NavigationProperty Name="StudentYears" Relationship="Self.Fk_dbo_StudentYear_dbo_Student_StudentId" FromRole="Student" ToRole="StudentYear" />
+  </EntityType>
+  <EntityType Name="StudentCourse">
+    <Key>
+      <PropertyRef Name="StudentCourseId" />
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="StudentCourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="CourseId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Course" Relationship="Self.Fk_dbo_StudentCourse_dbo_Course_CourseId" FromRole="StudentCourse" ToRole="Course" />
+    <NavigationProperty Name="Student" Relationship="Self.Fk_dbo_StudentCourse_dbo_Student_StudentId" FromRole="StudentCourse" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="StudentGroup">
+    <Key>
+      <PropertyRef Name="StudentGroupId" />
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="StudentGroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Group" Relationship="Self.Fk_dbo_StudentGroup_dbo_Group_GroupId" FromRole="StudentGroup" ToRole="Group" />
+    <NavigationProperty Name="Student" Relationship="Self.Fk_dbo_StudentGroup_dbo_Student_StudentId" FromRole="StudentGroup" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="StudentSubject">
+    <Key>
+      <PropertyRef Name="StudentSubjectId" />
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="SubjectId" />
+    </Key>
+    <Property Name="StudentSubjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="SubjectId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Student" Relationship="Self.Fk_dbo_StudentSubject_dbo_Student_StudentId" FromRole="StudentSubject" ToRole="Student" />
+    <NavigationProperty Name="Subject" Relationship="Self.Fk_dbo_StudentSubject_dbo_Subject_SubjectId" FromRole="StudentSubject" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="StudentYear">
+    <Key>
+      <PropertyRef Name="StudentYearId" />
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="YearId" />
+    </Key>
+    <Property Name="StudentYearId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="YearId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Student" Relationship="Self.Fk_dbo_StudentYear_dbo_Student_StudentId" FromRole="StudentYear" ToRole="Student" />
+    <NavigationProperty Name="Year" Relationship="Self.Fk_dbo_StudentYear_dbo_year_YearId" FromRole="StudentYear" ToRole="Year" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="SubjectId" />
+    </Key>
+    <Property Name="SubjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CourseGroupSubjects" Relationship="Self.Fk_dbo_CourseGroupSubject_dbo_Subject_SubjectId" FromRole="Subject" ToRole="CourseGroupSubject" />
+    <NavigationProperty Name="CourseSubjects" Relationship="Self.Fk_dbo_CourseSubject_dbo_Subject_SubjectId" FromRole="Subject" ToRole="CourseSubject" />
+    <NavigationProperty Name="StudentSubjects" Relationship="Self.Fk_dbo_StudentSubject_dbo_Subject_SubjectId" FromRole="Subject" ToRole="StudentSubject" />
+    <NavigationProperty Name="SubjectYears" Relationship="Self.Fk_dbo_SubjectYear_dbo_Subject_SubjectId" FromRole="Subject" ToRole="SubjectYear" />
+  </EntityType>
+  <EntityType Name="SubjectYear">
+    <Key>
+      <PropertyRef Name="SubjectYearId" />
+      <PropertyRef Name="SubjectId" />
+      <PropertyRef Name="YearId" />
+    </Key>
+    <Property Name="SubjectYearId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubjectId" Type="Int32" Nullable="false" />
+    <Property Name="YearId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Subject" Relationship="Self.Fk_dbo_SubjectYear_dbo_Subject_SubjectId" FromRole="SubjectYear" ToRole="Subject" />
+    <NavigationProperty Name="Year" Relationship="Self.Fk_dbo_SubjectYear_dbo_year_YearId" FromRole="SubjectYear" ToRole="Year" />
+  </EntityType>
+  <EntityType Name="xxxxx">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Year">
+    <Key>
+      <PropertyRef Name="YearId" />
+    </Key>
+    <Property Name="YearId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Groups" Relationship="Self.Fk_dbo_Group_dbo_Year_YearId" FromRole="Year" ToRole="Group" />
+    <NavigationProperty Name="StudentYears" Relationship="Self.Fk_dbo_StudentYear_dbo_year_YearId" FromRole="Year" ToRole="StudentYear" />
+    <NavigationProperty Name="SubjectYears" Relationship="Self.Fk_dbo_SubjectYear_dbo_year_YearId" FromRole="Year" ToRole="SubjectYear" />
+  </EntityType>
+  <Association Name="Fk_dbo_Activity_dbo_Day_DayId">
+    <End Role="Day" Type="Self.Day" Multiplicity="1" />
+    <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Day">
+        <PropertyRef Name="DayId" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="DayId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Activity_dbo_Group_GroupId">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Activity_dbo_Lecturer_LecturerId">
+    <End Role="Lecturer" Type="Self.Lecturer" Multiplicity="1" />
+    <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lecturer">
+        <PropertyRef Name="LecturerId" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="LecturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Activity_dbo_Room_RoomId">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="Activity" Type="Self.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Comment_dbo_Activity_ActivityId">
+    <End Role="Activity" Type="Self.Activity" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_GroupActivity_dbo_Activity_ActivityId">
+    <End Role="Activity" Type="Self.Activity" Multiplicity="1" />
+    <End Role="GroupActivity" Type="Self.GroupActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="GroupActivity">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_IdentityUser_Id">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="IdentityUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_IdentityUser_Id">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="IdentityUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Lecturer_dbo_AspNetUsers_Id">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+    <End Role="Lecturer" Type="Self.Lecturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lecturer">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Student_dbo_AspNetUsers_Id">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Comment_dbo_Lecturer_CreatedBy">
+    <End Role="Lecturer" Type="Self.Lecturer" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lecturer">
+        <PropertyRef Name="LecturerId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_CourseGroupSubject_dbo_Course_CourseId">
+    <End Role="Course" Type="Self.Course" Multiplicity="1" />
+    <End Role="CourseGroupSubject" Type="Self.CourseGroupSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="CourseGroupSubject">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_CourseSubject_dbo_Course_CourseId">
+    <End Role="Course" Type="Self.Course" Multiplicity="1" />
+    <End Role="CourseSubject" Type="Self.CourseSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="CourseSubject">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Group_dbo_Course_CourseId">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentCourse_dbo_Course_CourseId">
+    <End Role="Course" Type="Self.Course" Multiplicity="1" />
+    <End Role="StudentCourse" Type="Self.StudentCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="StudentCourse">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_CourseGroupSubject_dbo_Group_GroupId">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="CourseGroupSubject" Type="Self.CourseGroupSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="CourseGroupSubject">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_CourseGroupSubject_dbo_Subject_SubjectId">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="CourseGroupSubject" Type="Self.CourseGroupSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="CourseGroupSubject">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_CourseSubject_dbo_Subject_SubjectId">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="CourseSubject" Type="Self.CourseSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="CourseSubject">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_Group_dbo_Year_YearId">
+    <End Role="Year" Type="Self.Year" Multiplicity="1" />
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="YearId" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="YearId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_GroupActivity_dbo_Group_GroupId">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="GroupActivity" Type="Self.GroupActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="GroupActivity">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentGroup_dbo_Group_GroupId">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="StudentGroup" Type="Self.StudentGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="StudentGroup">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentCourse_dbo_Student_StudentId">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentCourse" Type="Self.StudentCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentCourse">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentGroup_dbo_Student_StudentId">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentGroup" Type="Self.StudentGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentGroup">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentSubject_dbo_Student_StudentId">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentSubject" Type="Self.StudentSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentSubject">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentYear_dbo_Student_StudentId">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentYear" Type="Self.StudentYear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentYear">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentSubject_dbo_Subject_SubjectId">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="StudentSubject" Type="Self.StudentSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="StudentSubject">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_StudentYear_dbo_year_YearId">
+    <End Role="Year" Type="Self.Year" Multiplicity="1" />
+    <End Role="StudentYear" Type="Self.StudentYear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="YearId" />
+      </Principal>
+      <Dependent Role="StudentYear">
+        <PropertyRef Name="YearId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_SubjectYear_dbo_Subject_SubjectId">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="SubjectYear" Type="Self.SubjectYear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="SubjectYear">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_dbo_SubjectYear_dbo_year_YearId">
+    <End Role="Year" Type="Self.Year" Multiplicity="1" />
+    <End Role="SubjectYear" Type="Self.SubjectYear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="YearId" />
+      </Principal>
+      <Dependent Role="SubjectYear">
+        <PropertyRef Name="YearId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ContextAwareAndRealTimeTimeTableEntitiesImport" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="Activities" EntityType="Self.Activity" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <EntitySet Name="Courses" EntityType="Self.Course" />
+    <EntitySet Name="CourseGroupSubjects" EntityType="Self.CourseGroupSubject" />
+    <EntitySet Name="CourseSubjects" EntityType="Self.CourseSubject" />
+    <EntitySet Name="Days" EntityType="Self.Day" />
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="GroupActivities" EntityType="Self.GroupActivity" />
+    <EntitySet Name="Lecturers" EntityType="Self.Lecturer" />
+    <EntitySet Name="Rooms" EntityType="Self.Room" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="StudentCourses" EntityType="Self.StudentCourse" />
+    <EntitySet Name="StudentGroups" EntityType="Self.StudentGroup" />
+    <EntitySet Name="StudentSubjects" EntityType="Self.StudentSubject" />
+    <EntitySet Name="StudentYears" EntityType="Self.StudentYear" />
+    <EntitySet Name="Subjects" EntityType="Self.Subject" />
+    <EntitySet Name="SubjectYears" EntityType="Self.SubjectYear" />
+    <EntitySet Name="xxxxxes" EntityType="Self.xxxxx" />
+    <EntitySet Name="Years" EntityType="Self.Year" />
+    <AssociationSet Name="Fk_dbo_Activity_dbo_Day_DayId" Association="Self.Fk_dbo_Activity_dbo_Day_DayId">
+      <End Role="Day" EntitySet="Days" />
+      <End Role="Activity" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Activity_dbo_Group_GroupId" Association="Self.Fk_dbo_Activity_dbo_Group_GroupId">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="Activity" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Activity_dbo_Lecturer_LecturerId" Association="Self.Fk_dbo_Activity_dbo_Lecturer_LecturerId">
+      <End Role="Lecturer" EntitySet="Lecturers" />
+      <End Role="Activity" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Activity_dbo_Room_RoomId" Association="Self.Fk_dbo_Activity_dbo_Room_RoomId">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Activity" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Comment_dbo_Activity_ActivityId" Association="Self.Fk_dbo_Comment_dbo_Activity_ActivityId">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_GroupActivity_dbo_Activity_ActivityId" Association="Self.Fk_dbo_GroupActivity_dbo_Activity_ActivityId">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="GroupActivity" EntitySet="GroupActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_IdentityUser_Id" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_IdentityUser_Id">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_IdentityUser_Id" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_IdentityUser_Id">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Lecturer_dbo_AspNetUsers_Id" Association="Self.Fk_dbo_Lecturer_dbo_AspNetUsers_Id">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Lecturer" EntitySet="Lecturers" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Student_dbo_AspNetUsers_Id" Association="Self.Fk_dbo_Student_dbo_AspNetUsers_Id">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Comment_dbo_Lecturer_CreatedBy" Association="Self.Fk_dbo_Comment_dbo_Lecturer_CreatedBy">
+      <End Role="Lecturer" EntitySet="Lecturers" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_CourseGroupSubject_dbo_Course_CourseId" Association="Self.Fk_dbo_CourseGroupSubject_dbo_Course_CourseId">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseGroupSubject" EntitySet="CourseGroupSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_CourseSubject_dbo_Course_CourseId" Association="Self.Fk_dbo_CourseSubject_dbo_Course_CourseId">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseSubject" EntitySet="CourseSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Group_dbo_Course_CourseId" Association="Self.Fk_dbo_Group_dbo_Course_CourseId">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="Group" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentCourse_dbo_Course_CourseId" Association="Self.Fk_dbo_StudentCourse_dbo_Course_CourseId">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="StudentCourse" EntitySet="StudentCourses" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_CourseGroupSubject_dbo_Group_GroupId" Association="Self.Fk_dbo_CourseGroupSubject_dbo_Group_GroupId">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="CourseGroupSubject" EntitySet="CourseGroupSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_CourseGroupSubject_dbo_Subject_SubjectId" Association="Self.Fk_dbo_CourseGroupSubject_dbo_Subject_SubjectId">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="CourseGroupSubject" EntitySet="CourseGroupSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_CourseSubject_dbo_Subject_SubjectId" Association="Self.Fk_dbo_CourseSubject_dbo_Subject_SubjectId">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="CourseSubject" EntitySet="CourseSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_Group_dbo_Year_YearId" Association="Self.Fk_dbo_Group_dbo_Year_YearId">
+      <End Role="Year" EntitySet="Years" />
+      <End Role="Group" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_GroupActivity_dbo_Group_GroupId" Association="Self.Fk_dbo_GroupActivity_dbo_Group_GroupId">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="GroupActivity" EntitySet="GroupActivities" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentGroup_dbo_Group_GroupId" Association="Self.Fk_dbo_StudentGroup_dbo_Group_GroupId">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="StudentGroup" EntitySet="StudentGroups" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentCourse_dbo_Student_StudentId" Association="Self.Fk_dbo_StudentCourse_dbo_Student_StudentId">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentCourse" EntitySet="StudentCourses" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentGroup_dbo_Student_StudentId" Association="Self.Fk_dbo_StudentGroup_dbo_Student_StudentId">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentGroup" EntitySet="StudentGroups" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentSubject_dbo_Student_StudentId" Association="Self.Fk_dbo_StudentSubject_dbo_Student_StudentId">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentSubject" EntitySet="StudentSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentYear_dbo_Student_StudentId" Association="Self.Fk_dbo_StudentYear_dbo_Student_StudentId">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentYear" EntitySet="StudentYears" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentSubject_dbo_Subject_SubjectId" Association="Self.Fk_dbo_StudentSubject_dbo_Subject_SubjectId">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="StudentSubject" EntitySet="StudentSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_StudentYear_dbo_year_YearId" Association="Self.Fk_dbo_StudentYear_dbo_year_YearId">
+      <End Role="Year" EntitySet="Years" />
+      <End Role="StudentYear" EntitySet="StudentYears" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_SubjectYear_dbo_Subject_SubjectId" Association="Self.Fk_dbo_SubjectYear_dbo_Subject_SubjectId">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="SubjectYear" EntitySet="SubjectYears" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_dbo_SubjectYear_dbo_year_YearId" Association="Self.Fk_dbo_SubjectYear_dbo_year_YearId">
+      <End Role="Year" EntitySet="Years" />
+      <End Role="SubjectYear" EntitySet="SubjectYears" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

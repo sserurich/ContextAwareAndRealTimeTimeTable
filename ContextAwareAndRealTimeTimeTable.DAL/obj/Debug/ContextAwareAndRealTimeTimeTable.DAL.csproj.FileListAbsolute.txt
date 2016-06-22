@@ -1,0 +1,14 @@
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.DAL.dll.config
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.DAL.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.DAL.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.EF.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.Models.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\EntityFramework.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.EF.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\ContextAwareAndRealTimeTimeTable.Models.pdb
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\EntityFramework.xml
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\obj\Debug\ContextAwareAndRealTimeTimeTable.DAL.csprojResolveAssemblyReference.cache
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\obj\Debug\ContextAwareAndRealTimeTimeTable.DAL.dll
+C:\Work\Current Projects\ContextAwareAndRealTimeTimeTable\ContextAwareAndRealTimeTimeTable.DAL\obj\Debug\ContextAwareAndRealTimeTimeTable.DAL.pdb

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba645ad298fe4f7b88e21add7d120d1c" Name="Diagram1" ZoomLevel="146">
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.AspNetRole" Width="1.5" PointX="1" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.AspNetUserClaim" Width="1.5" PointX="1" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.AspNetUser" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Day" Width="1.5" PointX="0.875" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Group" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.GroupActivity" Width="1.5" PointX="9.625" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Lecturer" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Room" Width="1.5" PointX="2.625" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Student" Width="1.5" PointX="4.625" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.StudentGroup" Width="1.5" PointX="8.25" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.StudentSubject" Width="1.5" PointX="10.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.StudentYear" Width="1.5" PointX="9.625" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Subject" Width="1.5" PointX="12.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Year" Width="1.5" PointX="7.125" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_IdentityUser_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_IdentityUser_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Lecturer_dbo_AspNetUsers_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Student_dbo_AspNetUsers_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_GroupActivity_dbo_Group_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentGroup_dbo_Group_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentGroup_dbo_Student_StudentId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentSubject_dbo_Student_StudentId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentYear_dbo_Student_StudentId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentSubject_dbo_Subject_SubjectId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentYear_dbo_year_YearId" ManuallyRouted="false" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Course" Width="1.5" PointX="0.75" PointY="20.125" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.CourseSubject" Width="1.5" PointX="10.5" PointY="18.875" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.SubjectYear" Width="1.5" PointX="12" PointY="12.375" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_CourseSubject_dbo_Course_CourseId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Group_dbo_Course_CourseId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_CourseSubject_dbo_Subject_SubjectId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Group_dbo_Year_YearId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_SubjectYear_dbo_Subject_SubjectId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_SubjectYear_dbo_year_YearId" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.CourseGroupSubject" Width="1.5" PointX="14.5" PointY="15.875" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_CourseGroupSubject_dbo_Course_CourseId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_CourseGroupSubject_dbo_Group_GroupId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_CourseGroupSubject_dbo_Subject_SubjectId" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.StudentCourse" Width="1.5" PointX="6.875" PointY="19.625" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentCourse_dbo_Course_CourseId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_StudentCourse_dbo_Student_StudentId" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Activity" Width="1.5" PointX="14.25" PointY="8.625" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Activity_dbo_Day_DayId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Activity_dbo_Group_GroupId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Activity_dbo_Lecturer_LecturerId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Activity_dbo_Room_RoomId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Activity_dbo_Subject_SubjectId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_GroupActivity_dbo_Activity_ActivityId" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Verification" Width="1.5" PointX="5.25" PointY="5.5" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Verification_dbo_AspNetUsers_RequestedBy" />
+        <EntityTypeShape EntityType="ContextAwareAndRealTimeTimeTableModel.Comment" Width="1.5" PointX="16.5" PointY="10.5" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Comment_dbo_Activity_ActivityId" />
+        <AssociationConnector Association="ContextAwareAndRealTimeTimeTableModel.Fk_dbo_Comment_dbo_AspNetUsers_CreatedBy" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

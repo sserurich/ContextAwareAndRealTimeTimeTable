@@ -1,0 +1,1385 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<fet version="5.26.2">
+
+  <Institution_Name>COCIS </Institution_Name>
+
+  <Comments>Default comments</Comments>
+
+  <Days_List>
+    <Number_of_Days>5</Number_of_Days>
+    <Day>
+      <Name>Monday</Name>
+    </Day>
+    <Day>
+      <Name>Tuesday</Name>
+    </Day>
+    <Day>
+      <Name>Wednesday</Name>
+    </Day>
+    <Day>
+      <Name>Thursday</Name>
+    </Day>
+    <Day>
+      <Name>Friday</Name>
+    </Day>
+  </Days_List>
+
+  <Hours_List>
+    <Number_of_Hours>13</Number_of_Hours>
+    <Hour>
+      <Name>08:00-09:00</Name>
+    </Hour>
+    <Hour>
+      <Name>09:00-10:00</Name>
+    </Hour>
+    <Hour>
+      <Name>10:00-11:00</Name>
+    </Hour>
+    <Hour>
+      <Name>11:00-12:00</Name>
+    </Hour>
+    <Hour>
+      <Name>12:00-13:00</Name>
+    </Hour>
+    <Hour>
+      <Name>13:00-14:00</Name>
+    </Hour>
+    <Hour>
+      <Name>14:00-15:00</Name>
+    </Hour>
+    <Hour>
+      <Name>15:00-16:00</Name>
+    </Hour>
+    <Hour>
+      <Name>16:00-17:00</Name>
+    </Hour>
+    <Hour>
+      <Name>17:00-18:00</Name>
+    </Hour>
+    <Hour>
+      <Name>18:00-19:00</Name>
+    </Hour>
+    <Hour>
+      <Name>19:00-20:00</Name>
+    </Hour>
+    <Hour>
+      <Name>20:00-21:00</Name>
+    </Hour>
+  </Hours_List>
+
+  <Students_List>
+    <Year>
+      <Name>YEAR I</Name>
+      <Number_of_Students>300</Number_of_Students>
+      <Group>
+        <Name> BIT-1 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> CS-1 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIS-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>  SE-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIT-EVE-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>CS-EVE-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIS-EVE-1 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>SE-EVE-1 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BLIS-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>      
+      <Group>
+        <Name>DRAM-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BRAM-EVE-1 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BLIS-EVE-1 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>DRAM-EVE-1</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+    </Year>
+    <Year>
+      <Name>YEAR II</Name>
+      <Number_of_Students>300</Number_of_Students>
+      <Group>
+        <Name> CS-2 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>BIT-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIS-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> SE-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> CS-EVE-2 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIT-EVE-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIS-EVE-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> SE-EVE-2 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>BLIS-2 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>      
+      <Group>
+        <Name> BRAM-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>DRAM-2 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BLIS-EVE-2 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>BRAM-EVE-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>DRAM-EVE-2</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+    </Year>
+    <Year>
+      <Name>Year III</Name>
+      <Number_of_Students>360</Number_of_Students>
+      <Group>
+        <Name>CS-3</Name>
+        <Number_of_Students>0</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> CS-EVE-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIT-3 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIS-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> SE-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BIT-EVE-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name>BIS-EVE-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> SE-EVE-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BLIS-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BRAM-3 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BLIS-EVE-3</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> BRAM-EVE-3 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+    </Year>
+    <Year>
+      <Name>Year IV</Name>
+      <Number_of_Students>0</Number_of_Students>
+      <Group>
+        <Name> SE-4</Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+      <Group>
+        <Name> SE-EVE-4 </Name>
+        <Number_of_Students>150</Number_of_Students>
+      </Group>
+    </Year>
+  </Students_List>
+
+  <Teachers_List>
+    <Teacher>
+      <Name>ABIDI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>AGABIRWE</Name>
+    </Teacher>
+    <Teacher>
+      <Name>AZIYO</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Abdul Nsubuga</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Agnes Nakakawa</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Agnes Rwashana</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Alice Mugisha</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Aminah Zawedde</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Andrew Gahwera</Name>
+    </Teacher>
+    <Teacher>
+      <Name>BAKAKI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>BUKIRWA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>BWEWUSSA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>BYAMUGISHA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Barbara Nansamba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Benjamin Kanagwa</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Bernard Muwonge</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Brian Muchake</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Davies Rwabu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Diana Babirye</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Diana Nakiyingi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Doreen Tuheirwe-Mukasa</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Dragule Swaib</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Drake Mirembe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>EKWARO</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Emily Bagarukayo</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Emma Mugejjera</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Emmanuel Eilu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Emmanuel Lule</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Engineer Bainomugisha</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Ernest Mwebaze</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Esther Namirembe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Evelyn Asio Kalenzi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Evelyn Kigozi Kahiigi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Fiona Ssozi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Fiona Tulinayo</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Flavia Namagembe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Florence Kivunike</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Fred Kiwanuka</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Gilbert Maiga</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Grace Kamulegeya</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Grace Kobusinge</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Haleem Chongomweru</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Hasifa Namatovu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Hawa Nyende</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Henry Serugunda</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Innocent Ndibatya</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Irene Arinaitwe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Irene Nakiyimba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Jacob Katende</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Joab Agaba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Joan Byamugisha</Name>
+    </Teacher>
+    <Teacher>
+      <Name>John Kizito</Name>
+    </Teacher>
+    <Teacher>
+      <Name>John Ngubiri</Name>
+    </Teacher>
+    <Teacher>
+      <Name>John Quinn</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Johnson Munaaba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Johnson Mwebaze</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Joseph Balikuddembe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Joseph Matovu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Joseph Ssemwogerere</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Josephine Nabukenya</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Joyce Nakatumba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Julianne Sansa-Otim</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Justus Karegyeya</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KACUNGUZI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KADDU</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KAWALYA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KHAN</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KIBANJA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KICONCO</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KIDAAGA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KIGONGO-BUKENYA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KIYINGI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>KULISOOMA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>LUYOMBYA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>MAGARA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>MARY Nalumansi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>MATOVU</Name>
+    </Teacher>
+    <Teacher>
+      <Name>MAYIGA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>MUTIBWA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>MUZAKI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Margaret Nagwovuma</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Mark Magumba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Marriette Katarahweire</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Martin Ngobye</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Mary Nsabagwa</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Mary Nsabagwa/Joab Agaba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Matsiko Eliab</Name>
+    </Teacher>
+    <Teacher>
+      <Name>May Namuddu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Mercy Amiyo</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Michael Kizito</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Moses Ntanda</Name>
+    </Teacher>
+    <Teacher>
+      <Name>NAIBOKA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>NALUMAGA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>NALUMANSI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>NAMUJUZI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>NGUBIRI</Name>
+    </Teacher>
+    <Teacher>
+      <Name>NINA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Nasser Kimbugwe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Newton Buteraba</Name>
+    </Teacher>
+    <Teacher>
+      <Name>OKELLO-OBURA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Paddy Asiimwe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Patrick Muinda</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Patrick Ogao</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Paul Bakaki</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Paul Katongole</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Paul Ssemaluulu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Perez Matsiko</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Peter Nabende</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Peter Wakholi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Rashidah Namisanvu</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Raymond Mugwanya</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Rebecca Asiimwe</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Rehema Baguma</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Richard Mayanja</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Richard Ssekibuule</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Ronald Mayambala</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Rose Nakibuule</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Ruth Mbabazi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>SENDIKADIWA</Name>
+    </Teacher>
+    <Teacher>
+      <Name>SSEKITTO</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Safari Yonasi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Samuel Mugabi</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Steven Odongo</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Swaib Kyanda Kaawaase</Name>
+    </Teacher>
+    <Teacher>
+      <Name>Tonny Bulega</Name>
+    </Teacher>
+    <Teacher>
+      <Name>ENON</Name>
+    </Teacher>
+  </Teachers_List>
+
+  <Subjects_List>
+    <Subject>
+      <Name>BIS 1203 Management Information Systems</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 1204 Data and Information Management 1</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 1205 Business Statistics</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 1206 System Analysis and Design</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 1208 IT Infrastrutcure</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 2206 Information Systems Project Management</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 2207 Applications Development</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 2208 Information Systems Architecture</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 3201 Strategic Management of Information Systems</Name>
+    </Subject>
+    <Subject>
+      <Name> BIS 3202 E-Governance</Name>
+    </Subject>
+    <Subject>
+      <Name>BIS 3204 Database Programming</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 1204 Information Management</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 1206 Introduction to Internet Programming</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 1208 Information Technology for Financial Services</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 1209 Security Policies and Procedures</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 2201 Marketing in the IT Sector</Name>
+    </Subject>
+    <Subject>
+      <Name> BIT 2206 Professional Law and Ethics</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 2207 Research Methodology</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 2208 System Administration</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 2209 IT Law and Ethics</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 2210 Digital Forensics and Incident Response</Name>
+    </Subject>
+    <Subject>
+      <Name> BIT 3200 Business Intelligence &amp; Data Warehousing</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 3204 Enterprise Network Management</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 3206 Information Assurance &amp; Security</Name>
+    </Subject>
+    <Subject>
+      <Name>BIT 3207 System Integration &amp; Architecture</Name>
+    </Subject>
+    <Subject>
+      <Name> BIT 4200 IT &amp; Society</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 1105 Information and Society</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 1112 Communication Skills &amp; Practice</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 1205 Principles of Knowledge Organization</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 1206 Publishing and Book Trade</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 1211 Information Technology II</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 2207 Documentation work and services</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 2208 Database Management and Information retrieval</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 2211 Classification II</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3115 Analysis of Records Management systems</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3117 Publication Design and Production</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3120 Library Operations</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3211 Community Information Services</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3212 Entrepreneurship in Information Work</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3214 Automation of Records Management Systems</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3215 Records Management and the Law</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3216 Electronic Publishing</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3217 Publishing and the law</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3218 Library Automation</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3219 Library ethics and policy</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3220 Community &amp; Specialized Information Systems</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3221 Management of Electronic Resources</Name>
+    </Subject>
+    <Subject>
+      <Name>BLS 3222 Legal, Policy and Information Ethics</Name>
+    </Subject>
+    <Subject>
+      <Name> BLS 3223 Information Entrepreneurship</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 1101 Principles of Records and Archives Management</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 1201 Papermaking and Reprography</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 1202 Audiovisual Records Management</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 1203 Classification and Cataloguing</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 1204 Applied Organizational Psychology</Name>
+    </Subject>
+    <Subject>
+      <Name> BRM 1205 Government Information Resources and Systems</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 1206 Information Technology II</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 2201 Management Principles and Practices</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 2202 Health Records management</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 2203 Archives Administration</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 2204 Records Storage and Security</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 2205 Research Data Analysis</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 3201 Management of museums</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 3202 Records and Archives Institution Management</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 3203 Management of Electronic records</Name>
+    </Subject>
+    <Subject>
+      <Name>BRM 3215 Records Management and the Law</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 1206 Software Development Principles</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 1207 Introduction to Internet Programming</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 2200 Systems Software</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 2203 Computer Networks &amp; Data Communication</Name>
+    </Subject>
+    <Subject>
+      <Name> BSE 2205 Network Applications Development</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 2206 Data Communications</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 3201 Software Architecture</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 3202 Distributed Systems Development</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 3203 Object-Oriented Progrmming</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 3207 Mobile Networks &amp; Computing</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 3209 Computer Graphics</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 4104 Emerging trends in Software Engineering</Name>
+    </Subject>
+    <Subject>
+      <Name>BSE 4201 Software Design Patterns</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 1207 Programming Methodology II</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 1209 Logic Programming</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 1210 Programming Methodology I</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 1214 Object-Oriented Programming</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 2200 Operating Systems</Name>
+    </Subject>
+    <Subject>
+      <Name> CSC 2209 Systems Programming</Name>
+    </Subject>
+    <Subject>
+      <Name> CSC 2210 Automata, Complexity &amp; Computability</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 2212 Individual Project II</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 2214 Cryptology and Coding Theory</Name>
+    </Subject>
+    <Subject>
+      <Name> CSC 3205 Compiler Design</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 3207 Computer Security</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 3208 User Interface Design</Name>
+    </Subject>
+    <Subject>
+      <Name>CSC 3209 Computer Graphics</Name>
+    </Subject>
+    <Subject>
+      <Name>DLS 2201 Introduction to database management</Name>
+    </Subject>
+    <Subject>
+      <Name>DLS 2205 Introduction to Database Management</Name>
+    </Subject>
+    <Subject>
+      <Name>DLS 2206 Bibliographic Control</Name>
+    </Subject>
+    <Subject>
+      <Name>DLS 2207 Marketing of Information Services</Name>
+    </Subject>
+    <Subject>
+      <Name>DLS 2208 Project planning and management</Name>
+    </Subject>
+    <Subject>
+      <Name>DRAM 2206 Project Planning &amp; Management</Name>
+    </Subject>
+    <Subject>
+      <Name>DRM 2204 Stores &amp; Material Management</Name>
+    </Subject>
+    <Subject>
+      <Name>MTH 1203 Calculus I</Name>
+    </Subject>
+    <Subject>
+      <Name>MTH 2203 Numerical Analysis</Name>
+    </Subject>
+    <Subject>
+      <Name> RAM 2202 Information Legislation &amp; Ethics</Name>
+    </Subject>
+    <Subject>
+      <Name> RAM 2206 Project Planning &amp; Management</Name>
+    </Subject>
+    <Subject>
+      <Name>RAM 2208 Preservation and conservation</Name>
+    </Subject>
+    <Subject>
+      <Name>RAM 2209 Stores and materials management</Name>
+    </Subject>
+  </Subjects_List>
+
+  <Activity_Tags_List>
+  </Activity_Tags_List>
+
+  <Activities_List>
+    <Activity>
+      <Teacher>Aminah Zawedde</Teacher>
+      <Subject>BIS 1206 System Analysis and Design</Subject>
+      <Students> BIT-1 </Students>
+      <Students> BIT-EVE-1</Students>
+      <Duration>2</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>1</Id>
+      <Activity_Group_Id>0</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Henry Serugunda</Teacher>
+      <Subject>BIT 1208 Information Technology for Financial Services</Subject>
+      <Students> BIT-1 </Students>
+      <Students> BIT-EVE-1</Students>
+      <Duration>2</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>2</Id>
+      <Activity_Group_Id>0</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Flavia Namagembe</Teacher>
+      <Subject>BIT 1204 Information Management</Subject>
+      <Students> BIT-1 </Students>
+      <Students> BIT-EVE-1</Students>
+      <Duration>2</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>3</Id>
+      <Activity_Group_Id>0</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Innocent Ndibatya</Teacher>
+      <Subject>CSC 1214 Object-Oriented Programming</Subject>
+      <Students> BIT-1 </Students>
+      <Students> BIT-EVE-1</Students>
+      <Duration>2</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>5</Id>
+      <Activity_Group_Id>0</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Emma Mugejjera</Teacher>
+      <Subject>BIT 1209 Security Policies and Procedures</Subject>
+      <Students> BIT-1 </Students>
+      <Students> BIT-EVE-1</Students>
+      <Duration>2</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>6</Id>
+      <Activity_Group_Id>0</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>John Ngubiri</Teacher>
+      <Subject>MTH 2203 Numerical Analysis</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>7</Id>
+      <Activity_Group_Id>7</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>John Ngubiri</Teacher>
+      <Subject>MTH 2203 Numerical Analysis</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>8</Id>
+      <Activity_Group_Id>7</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>John Ngubiri</Teacher>
+      <Subject>MTH 2203 Numerical Analysis</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>9</Id>
+      <Activity_Group_Id>9</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>John Ngubiri</Teacher>
+      <Subject>MTH 2203 Numerical Analysis</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>10</Id>
+      <Activity_Group_Id>9</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Mercy Amiyo</Teacher>
+      <Subject>BIS 1204 Data and Information Management 1</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>11</Id>
+      <Activity_Group_Id>11</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Mercy Amiyo</Teacher>
+      <Subject>BIS 1204 Data and Information Management 1</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>12</Id>
+      <Activity_Group_Id>11</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Barbara Nansamba</Teacher>
+      <Subject>MTH 1203 Calculus I</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>13</Id>
+      <Activity_Group_Id>13</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+    <Activity>
+      <Teacher>Barbara Nansamba</Teacher>
+      <Subject>MTH 1203 Calculus I</Subject>
+      <Students> CS-1 </Students>
+      <Students>CS-EVE-1</Students>
+      <Duration>1</Duration>
+      <Total_Duration>2</Total_Duration>
+      <Id>14</Id>
+      <Activity_Group_Id>13</Activity_Group_Id>
+      <Active>true</Active>
+      <Comments></Comments>
+    </Activity>
+  </Activities_List>
+
+  <Buildings_List>
+    <Building>
+      <Name>BLOCK B</Name>
+    </Building>
+  </Buildings_List>
+
+  <Rooms_List>
+    <Room>
+      <Name>LLT 1A</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 1B</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 2B</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 2A</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 3A</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 3B</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 4B</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 4A</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 5A</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 6A</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 6B</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 5B</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 2C</Name>
+      <Building></Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>LLT 6C</Name>
+      <Building>BLOCK B</Building>
+      <Capacity>500</Capacity>
+    </Room>
+    <Room>
+      <Name>BIG LAB</Name>
+      <Building></Building>
+      <Capacity>30000</Capacity>
+    </Room>
+    <Room>
+      <Name>BIG LAB 2</Name>
+      <Building></Building>
+      <Capacity>30000</Capacity>
+    </Room>
+  </Rooms_List>
+
+  <Time_Constraints_List>
+    <ConstraintBasicCompulsoryTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintBasicCompulsoryTime>
+    <ConstraintMinDaysBetweenActivities>
+      <Weight_Percentage>95</Weight_Percentage>
+      <Consecutive_If_Same_Day>false</Consecutive_If_Same_Day>
+      <Number_of_Activities>2</Number_of_Activities>
+      <Activity_Id>7</Activity_Id>
+      <Activity_Id>8</Activity_Id>
+      <MinDays>3</MinDays>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintMinDaysBetweenActivities>
+    <ConstraintMinDaysBetweenActivities>
+      <Weight_Percentage>95</Weight_Percentage>
+      <Consecutive_If_Same_Day>false</Consecutive_If_Same_Day>
+      <Number_of_Activities>2</Number_of_Activities>
+      <Activity_Id>9</Activity_Id>
+      <Activity_Id>10</Activity_Id>
+      <MinDays>2</MinDays>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintMinDaysBetweenActivities>
+    <ConstraintMinDaysBetweenActivities>
+      <Weight_Percentage>95</Weight_Percentage>
+      <Consecutive_If_Same_Day>false</Consecutive_If_Same_Day>
+      <Number_of_Activities>2</Number_of_Activities>
+      <Activity_Id>9</Activity_Id>
+      <Activity_Id>10</Activity_Id>
+      <MinDays>1</MinDays>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintMinDaysBetweenActivities>
+    <ConstraintMinDaysBetweenActivities>
+      <Weight_Percentage>95</Weight_Percentage>
+      <Consecutive_If_Same_Day>true</Consecutive_If_Same_Day>
+      <Number_of_Activities>2</Number_of_Activities>
+      <Activity_Id>11</Activity_Id>
+      <Activity_Id>12</Activity_Id>
+      <MinDays>2</MinDays>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintMinDaysBetweenActivities>
+    <ConstraintMinDaysBetweenActivities>
+      <Weight_Percentage>95</Weight_Percentage>
+      <Consecutive_If_Same_Day>true</Consecutive_If_Same_Day>
+      <Number_of_Activities>2</Number_of_Activities>
+      <Activity_Id>13</Activity_Id>
+      <Activity_Id>14</Activity_Id>
+      <MinDays>1</MinDays>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintMinDaysBetweenActivities>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>1</Activity_Id>
+      <Preferred_Day>Thursday</Preferred_Day>
+      <Preferred_Hour>14:00-15:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>2</Activity_Id>
+      <Preferred_Day>Wednesday</Preferred_Day>
+      <Preferred_Hour>10:00-11:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>3</Activity_Id>
+      <Preferred_Day>Tuesday</Preferred_Day>
+      <Preferred_Hour>19:00-20:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>5</Activity_Id>
+      <Preferred_Day>Tuesday</Preferred_Day>
+      <Preferred_Hour>10:00-11:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>6</Activity_Id>
+      <Preferred_Day>Thursday</Preferred_Day>
+      <Preferred_Hour>19:00-20:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>7</Activity_Id>
+      <Preferred_Day>Wednesday</Preferred_Day>
+      <Preferred_Hour>15:00-16:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>8</Activity_Id>
+      <Preferred_Day>Wednesday</Preferred_Day>
+      <Preferred_Hour>18:00-19:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>9</Activity_Id>
+      <Preferred_Day>Tuesday</Preferred_Day>
+      <Preferred_Hour>12:00-13:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>10</Activity_Id>
+      <Preferred_Day>Thursday</Preferred_Day>
+      <Preferred_Hour>08:00-09:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>11</Activity_Id>
+      <Preferred_Day>Friday</Preferred_Day>
+      <Preferred_Hour>20:00-21:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>12</Activity_Id>
+      <Preferred_Day>Monday</Preferred_Day>
+      <Preferred_Hour>18:00-19:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>13</Activity_Id>
+      <Preferred_Day>Friday</Preferred_Day>
+      <Preferred_Hour>18:00-19:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+    <ConstraintActivityPreferredStartingTime>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Activity_Id>14</Activity_Id>
+      <Preferred_Day>Tuesday</Preferred_Day>
+      <Preferred_Hour>14:00-15:00</Preferred_Hour>
+      <Permanently_Locked>false</Permanently_Locked>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintActivityPreferredStartingTime>
+  </Time_Constraints_List>
+
+  <Space_Constraints_List>
+    <ConstraintBasicCompulsorySpace>
+      <Weight_Percentage>100</Weight_Percentage>
+      <Active>true</Active>
+      <Comments></Comments>
+    </ConstraintBasicCompulsorySpace>
+  </Space_Constraints_List>
+
+</fet>
+

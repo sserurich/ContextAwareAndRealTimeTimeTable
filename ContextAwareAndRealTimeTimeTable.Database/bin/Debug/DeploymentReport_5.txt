@@ -1,0 +1,28 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Group]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Group] (Table)
+     Create
+       [dbo].[Course] (Table)
+       [dbo].[Fk_dbo_Group_dbo_Course_CourseId] (Foreign Key)
+
+** Supporting actions
+     Drop
+       [dbo].[Fk_dbo_Activity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_GroupActivity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentGroup_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_Group_dbo_Year_YearId] (Foreign Key)
+     Create
+       [dbo].[Fk_dbo_Activity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_GroupActivity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentGroup_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_Group_dbo_Year_YearId] (Foreign Key)

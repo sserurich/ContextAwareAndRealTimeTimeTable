@@ -1,0 +1,131 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.login{    
+  border: 1px solid #d6d6d6;
+  height:600px;
+  
+}
+
+.btn-custom{
+  border: 2px solid #337ab7;
+  color: #fff;
+  background: #80C342;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color:#80C342;
+  height:40px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-custom-modified{
+    color:#444 !important;
+    background-color:#f2f2f2 !important;
+}
+
+.heightcustom{
+    height:100px;
+
+}
+.text{
+    width:400px;
+    height:50px;
+}
+
+.boxdefault{
+    background: #80C342;
+    /*color: #fff;*/
+    color:#444 !important;
+}
+input{
+    max-width:400px;
+}
+
+.tablecell{
+    width:245px;
+    height:110px;
+
+}
+.alert-success{
+    background-color:#f2f2f2 !important;
+}
+.alert-danger{
+    background-color:#fff !important;
+}
+.alert-info {
+  background-color: #fff !important;
+}
+.page-header{
+    color:#444 !important;
+    margin: 20px 0 20px;
+}
+
+.tablecustom{
+    background-color:#fff !important;
+}
+
+.addon{
+      color:#337ab7 !important;
+      font-weight:bold !important;
+}
+
+ .modified{
+            background-color:#f2f2f2 !important;
+            color:#337ab7 !important;
+             }
+     .modified>a{
+            color:#337ab7 !important;
+        }
+        .blueColor{
+            color: #337ab7 !important;
+        }
+        .body-content{
+            color:#337ab7 !important;
+        }
+#page-title {
+    width:50%!important;
+}
+
+.searchCustom{
+    margin:15px 0 20px;
+    border-bottom: 1px solid #eee
+}
+
+.searchbox button {
+  border: 0;
+  background: none;
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.white-color{
+    color:#FFF !important;
+    background-color:#337ab7!important
+}
+.white-color>a{
+    color:#fff !important;
+}

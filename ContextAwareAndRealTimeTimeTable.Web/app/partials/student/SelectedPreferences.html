@@ -1,0 +1,67 @@
+﻿<div ng-controller="PreferencesViewController">
+    <div class="row">
+        <div class="col-md-8">
+            <h4 class="addon">Your Selected Preferences</h4>
+        </div>
+    </div>
+    <div class="row">  
+        <div class="col-md-6">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title addon">Selected Years</h3></div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="studentSelectedYear in studentSelectedYears" class="list-group-item">
+                                {{studentSelectedYear.Name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title addon">Selected Courses</h3></div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="studentSelectedCourse in studentSelectedCourses" class="list-group-item">
+                                {{studentSelectedCourse.Description}}
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="col-md-6">
+            
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title addon">Selected Groups</h3></div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="studentSelectedGroup in studentSelectedGroups" class="list-group-item">
+                                {{studentSelectedGroup.Name}}
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title addon">Selected Subjects</h3></div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li ng-repeat="studentSelectedSubject in studentSelectedSubjects" class="list-group-item">
+                                {{studentSelectedSubject.Name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  
+</div>

@@ -1,0 +1,84 @@
+﻿@using ContextAwareAndRealTimeTimeTable.Web.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+<h2></h2>
+<div class="row">
+    <div class="col-md-3">
+       
+    </div>
+    <div class="col-md-6 login">
+        <div class="row heightcustom">
+            <div class="panel">
+                <div class="panel-heading boxdefault modified">Context Aware and Realtime Timetable Account</div>
+                @*<div class="panel-body"><p>Your Unified Login to Context Aware & Realtime Timetable</p></div>*@   
+            </div>  
+                   
+        </div>
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                 
+                
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                  
+                    <label class="col-md-2 control-label"></label>
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control text", @placeholder="Email Address e.g sserurich@gmail.com" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label"></label>                   
+                    <div class="col-md-12">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control text", @placeholder="Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-offset-4 col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label"></label>
+                    <div class="col-md-offset-4 col-md-10">                          
+                        <input type="submit" value="Log in" class="btn btn-default text-center btn-custom btn-custom-modified" />
+                                                  
+                    </div>
+                </div>
+                <p class="text-center">
+                    @Html.ActionLink("Register as a new user", "Register")
+                </p>
+                @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+
+            @*<div class="row heightcustom">
+            <div class="panel">
+            <div class="panel-heading"></div>
+            <div class="panel-body"><p>With Context Aware And Realtime Timetable Account you get access to your personalised timetable,exclusive services, ongoing lectures and notifications </p></div>
+            </div>
+
+           </div>*@
+            }
+        </section>
+    </div>
+    <div class="col-md-3">
+        
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

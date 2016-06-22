@@ -1,0 +1,186 @@
+﻿<div ng-controller="ActivityEditController">
+
+    <div id="page-title">
+        <h4 class="">Activity Edit</h4>
+      </div>
+
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li>timetable</li>
+        <li>activity</li>
+        <li>edit</li>
+
+    </ol>
+
+    <div class="clear0"></div>
+    <hr />
+
+    <div class="panel panel-default panel-left">
+        <div class="panel-body">
+            <div class="col-md-7">
+
+                <form name="form" class="form-horizontal">
+                    <div class="col-md-12">
+                        <div class="col-md-12 form-group">
+                            <label class="control-label">Start Time &nbsp; &nbsp; {{activity.StartTime}}</label>
+                            <div class="clear0"></div>
+                            <input name="startTime" kendo-time-picker width="25" maxlength="20" class="form-control date-field"
+                                   ng-model="activity.StartTime" required ng-class="{ errorinput: form.startTime.$invalid }" ng-pattern="/^([0-1]?\d):([0-5]?\d)$/">
+                            <div class="clear0"></div>
+                            <span class="note">HH:MM AM/PM &nbsp; 12 hr Time e.g 8:00 AM</span>
+                            <span ng-show="form.startTime.$invalid">
+                                <span ng-show="form.startTime.$error.required" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> Start Time is required.</span>
+                                <span ng-show="form.startTime.$error.pattern" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> Match Pattern 8:00 AM.</span>
+                            </span>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <label class="control-label">End Time &nbsp; &nbsp; {{activity.EndTime}} </label>
+                            <div class="clear0"></div>
+                            <input name="endTime" kendo-time-picker width="25" maxlength="20" class="form-control date-field"
+                                   ng-model="activity.EndTime" required ng-class="{ errorinput: form.endTime.$invalid }" ng-pattern="/^([0-1]?\d):([0-5]?\d))$/">
+                            <div class="clear0"></div>
+                            <span class="note">HH:MM AM/PM &nbsp; 12 hr Time e.g 8:00 PM</span>
+                            <span ng-show="form.endTime.$invalid">
+                                <span ng-show="form.endTime.$error.required" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> End Time is required.</span>
+                                <span ng-show="form.endTime.$error.pattern" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> Match Pattern 8:00 PM.</span>
+
+                            </span>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <div class="row">
+                                <label class="col-md-2 control-label">Room</label>
+                                <div class="col-md-8">
+                                    <select name="room" class="form-control" data-ng-model="activity.RoomId" data-ng-options="a.RoomId as (a.Name) for a in rooms">
+                                        <option value="">Please select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <div class="row">
+                                <label class="col-md-2 control-label">Subject</label>
+                                <div class="col-md-8">
+                                    <select name="subject" class="form-control" data-ng-model="activity.SujectId" data-ng-options="a.SubjectId as (a.Name) for a in subjects">
+                                        <option value="">Please select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 form-group">
+                            <div class="row">
+                                <label class="col-md-2 control-label">Group</label>
+                                <div class="col-md-8">
+                                    <select name="group" class="form-control" data-ng-model="activity.GroupId" data-ng-options="a.GroupId as (a.Name) for a in groups">
+                                        <option value="">Please select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <div class="row">
+                                <label class="col-md-2 control-label">Day</label>
+                                <div class="col-md-8">
+                                    <select name="day" class="form-control" data-ng-model="activity.DayId" data-ng-options="a.DayId as (a.Name) for a in days">
+                                        <option value="">Please select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-2">
+
+                            </div>
+                            <div class="col-md-10">
+                                <div class="check-element sample-show-hide alert alert-success animate-show"
+                                     ng-show="showActivitySave" style="clear:both;">
+                                    <i class="fa-fw fa fa-check"></i>
+                                    <span>Activity details have been updated </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+
+                            <div class="col-md-10">
+
+                                <div class="btn-group btn-default">
+                                    <button ng-click="updateActivity(activity)" class="btn btn-primary">
+                                        Save
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-5 border-right">
+                <h4>Activity Comments</h4>
+                <div ng-show="showComments" class="col-md-10">
+                    <div class="panel" style="padding-bottom: 0;">
+                        <div ng-hide="activityComments.length" class="alert fade in error panel-body">There currently no comments</div>
+
+                        <div class="panel panel-default" ng-repeat="comment in activityComments">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="text-semibold media-heading box-inline">
+                                        {{comment.AspNetUser.FirstName}} {{comment.AspNetUser.LastName}} - {{comment.CreatedOn| date:"yyyy-MM-dd hh:mm"}}
+
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="">
+                                <p class="panel-body">{{comment.Description}}</p>
+                            </div>
+                               <hr>
+                           
+                        </div>
+                    </div>
+
+                    <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showCommentactivitySave" style="clear:both;">
+                        <i class="fa-fw fa fa-check"></i>
+                        <span>Comment has been saved</span>
+                    </div>
+                    <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showCommentactivityDelete" style="clear:both;">
+                        <i class="fa-fw fa fa-check"></i>
+                        <span>Comment has been deleted</span>
+                    </div>
+                    <div class="check-element sample-show-hide alert alert-success animate-show" ng-show="showCommentactivityDeleteFailed" style="clear:both;">
+                        <i class="fa-fw fa fa-check"></i>
+                        <span>Failed to delete Comment </span>
+                    </div>
+
+                    <div class="panel-body" style="padding-top: 0;">
+                        <form name=" commentform" class="form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <div>
+                                        <textarea placeholder="Add comment..." name="comment" rows="4" class="form-control" ng-model="comment.Description" required ng-class="{ errorinput: commentform.comment.$invalid }"> </textarea>
+                                        <span ng-show="commentform.comment.$invalid">
+                                            <span ng-show="commentform.comment.$error.required" class="help-block error margin-bottom-00 "><i class="fa fa-warning"></i> Comment is required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button class="btn btn-primary pull-right" type="submit" ng-disabled="!commentform.$valid" ng-click="addComment(comment)"><i class="fa fa-send fa-fw"></i> Add comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

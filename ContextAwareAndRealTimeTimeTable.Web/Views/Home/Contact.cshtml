@@ -1,0 +1,116 @@
+﻿@*@model ContextAwareAndRealTimeTimeTable.Web.Models.MobileTest
+
+@{
+    ViewBag.Title = "Testing Messaging ";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<section>
+    <h4>MESSAGING TEST</h4>
+    @using (Html.BeginForm("Contact", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+    <div class="form-group">
+      
+            @Html.LabelFor(m => m.Mobile, new { @class = "col-md-2"})
+      
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Mobile, new { @class = "form-control text", @placeholder = "Mobile e.g 256784007618" })
+        </div>
+    </div>
+        <div class="form-group">
+      
+            @Html.LabelFor(m => m.Message, new { @class = "col-md-2"})
+      
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Message, new { @class = "form-control text", @width="100px",@height="400px"  })
+        </div>
+    </div> 
+        
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default text-center btn-custom" value="Test" />
+        </div>
+    </div>
+    }
+</section>*@
+
+<div ng-controller="ExamsActivityController">
+    <div class="row">
+        <div id="page-title " class=" col-md-6">
+            <h4 class="page-header addon">Exams Timetable Schedules</h4>
+
+        </div>
+    <div class="searchbox col-md-6 searchCustom">
+        <div class="input-group custom-search-form">
+            <input id="search-fld" type="text" name="param" placeholder="Search using either subject,lect name, time, Day " ng-model="searchKeyword" class="form-control">
+            <span class="input-group-btn">
+                <button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    </div>
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li>timetable</li>
+        <li>Exams</li>
+
+    </ol>
+
+    <div class="clear0"></div>
+    <hr />
+
+    <div class="panel panel-default panel-left">
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div ng-hide="data.length">
+                    <p>There currently no exam Acitivities</p>
+                </div>
+
+                <div ng-hide="!data.length" ng-loading-container="tableParams.settings().$loading">
+                    <table ng-table="tableParams" class="table table-bordered table-hover smallTable table-striped">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    <div>Subject</div>
+                                </th>
+                                <th>Day</th>
+                                <th>Group</th>
+                                <th>Room</th>
+                                @*<th>Lecturer</th>*@
+                                <th>StartTime</th>
+                                <th>EndTime</th>
+                               @if (Request.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Lecturer")))
+                                 { <th>Comment</th>
+                               }
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="activity in $data">
+                                <td width="25%">@*<a href="#/activity/edit/{{activity.SubjectId}}">*@{{activity.Subject.Name}}@*</a>*@</td>
+                                <td width="20%">{{activity.Day.Name}}</td>
+                                <td width="15%">{{activity.Group.Name}}</td>
+                                <td width="15%">{{activity.Room.Name}}</td>                              
+                                <td width="15%">{{activity.StartTime}}</td>
+                                <td width="15%">{{activity.EndTime}}</td>
+                                @if (Request.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Lecturer")))
+                                 { <td width="20%"><a href="#/activity/edit/{{activity.SubjectId}}">Indicate Availability</a></td>
+                                }
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

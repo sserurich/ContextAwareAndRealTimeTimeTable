@@ -1,0 +1,21 @@
+﻿** Warnings
+     WITH CHECK | NOCHECK option for existing data check enforcement is ignored.
+     WITH CHECK | NOCHECK option for existing data check enforcement is ignored.
+     The object reference [dbo].[StudentYear].[yearId] differs only by case from the object definition
+       [dbo].[StudentYear].[YearId].
+
+** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Fk_dbo_Activity_dbo_Day_DayId] (Foreign Key)
+
+** Supporting actions

@@ -1,0 +1,62 @@
+﻿** Warnings
+     WITH CHECK | NOCHECK option for existing data check enforcement is ignored.
+     WITH CHECK | NOCHECK option for existing data check enforcement is ignored.
+     The object reference [dbo].[StudentYear].[yearId] differs only by case from the object definition
+       [dbo].[StudentYear].[YearId].
+
+** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[AspNetUserClaims].[IX_UserId] (Index)
+       [dbo].[AspNetRoles].[RoleNameIndex] (Index)
+       [dbo].[AspNetUserLogins].[IX_UserId] (Index)
+       [dbo].[AspNetUserRoles].[IX_RoleId] (Index)
+       [dbo].[AspNetUserRoles].[IX_UserId] (Index)
+       [dbo].[AspNetUsers].[UserNameIndex] (Index)
+       [dbo].[FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId] (Foreign Key)
+     Alter
+       [dbo].[AspNetUserClaims] (Table)
+       [dbo].[AspNetUserLogins] (Table)
+     Create
+       [dbo].[Activity] (Table)
+       [dbo].[Comment] (Table)
+       [dbo].[Day] (Table)
+       [dbo].[Group] (Table)
+       [dbo].[GroupActivity] (Table)
+       [dbo].[Lecturer] (Table)
+       [dbo].[Room] (Table)
+       [dbo].[Student] (Table)
+       [dbo].[StudentGroup] (Table)
+       [dbo].[StudentSubject] (Table)
+       [dbo].[StudentYear] (Table)
+       [dbo].[Subject] (Table)
+       [dbo].[Year] (Table)
+       [dbo].[Fk_dbo_Activity_dbo_Lecturer_LecturerId] (Foreign Key)
+       [dbo].[Fk_dbo_Activity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_Activity_dbo_Room_RoomId] (Foreign Key)
+       [dbo].[Fk_dbo_Comment_dbo_Lecturer_CreatedBy] (Foreign Key)
+       [dbo].[Fk_dbo_Comment_dbo_Activity_ActivityId] (Foreign Key)
+       [dbo].[Fk_dbo_GroupActivity_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_GroupActivity_dbo_Activity_ActivityId] (Foreign Key)
+       [dbo].[Fk_dbo_Lecturer_dbo_AspNetUsers_Id] (Foreign Key)
+       [dbo].[Fk_dbo_Student_dbo_AspNetUsers_Id] (Foreign Key)
+       [dbo].[Fk_dbo_StudentGroup_dbo_Group_GroupId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentGroup_dbo_Student_StudentId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentSubject_dbo_Subject_SubjectId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentSubject_dbo_Student_StudentId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentYear_dbo_year_YearId] (Foreign Key)
+       [dbo].[Fk_dbo_StudentYear_dbo_Student_StudentId] (Foreign Key)
+       [dbo].[FK_dbo.AspNetUserClaims_dbo.AspNetUsers_IdentityUser_Id] (Foreign Key)
+       [dbo].[FK_dbo.AspNetUserLogins_dbo.AspNetUsers_IdentityUser_Id] (Foreign Key)
+
+** Supporting actions
