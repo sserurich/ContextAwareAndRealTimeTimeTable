@@ -2,7 +2,7 @@ title: Contextawareandrealtimetimetable
 description: "Bsc Final Year Project (members: Kyamutwe Ronald, Mukazitoni Esther,Sserunjogi Richard, Juma Albert"
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 
 gems:
   - jekyll-mentions
